@@ -1,0 +1,36 @@
+.main-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-bottom-right-radius: 15vw;
+    background-color: black;
+    background-image: url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.main-hero .hero-inner {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+    color: var(--white-color);
+}
+.main-hero .hero-inner .hero-content {
+    width: 50%;
+}
+.main-hero .hero-content h2 {
+    font-size: 80px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: "Patrick Hand", cursive;
+}
+.main-hero .hero-content span {
+    font-size: 18px;
+}
+.main-hero .cta-btn {
+    margin-top: 20px;
+}

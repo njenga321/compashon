@@ -1,38 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
 .App {
   text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #888;
+  scroll-behavior: smooth;
+}
+body {
+  background: #f3f0eb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --pri-color:#FF5B00;
+  --sec-color:#008080;
+  --white-color:#ffffff;
+  --black-color:#000000;
+  --dark-color: #0c0c0c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+  color: #39311d;
+  font-weight: 400;
+  font-family: "Patrick Hand", cursive;
+}
+.subtitle {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.item-btn {
+  background-color: var(--pri-color);
+  padding: 15px;
+  border-radius: 15vw;
+  text-decoration: none;
+  color: var(--white-color);
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-btn:hover {
+  background-color: var(--sec-color);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }

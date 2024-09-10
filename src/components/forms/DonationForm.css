@@ -1,0 +1,101 @@
+.donation-form {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .donation-display {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-color);
+  }
+  .donation-display select {
+    padding: 10px;
+    color: white;
+    border-radius: 5px;border: none;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .donation-display select option {
+    background-color: #fff;
+    color: #333;
+    padding: 20px !important;
+  }
+  .donation-display select option:hover {
+    background-color: var(--black-color) !important;
+  }
+ 
+  .donation-form select:focus {
+    outline: none;
+  }
+  .donation-amount {
+    display: flex;
+    margin-right: 10px;
+    width: 100%;
+  }
+  
+  .currency-selector {
+    display: flex;
+    justify-items: flex-start;
+    padding: 5px;
+    height: 100%;
+  }
+  .amount-display {
+    display: flex;
+    padding: 0px;
+    background-color: var(--white-color);
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold !important;
+    font-size: 50px;
+    color: var(--dark-color);
+  }
+  .custom-amount-input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    margin-right: 10px;
+    outline: none;
+    font-weight: bold !important;
+    font-size: 50px;
+    color: var(--dark-color);
+  }
+  
+  .donation-buttons {
+    margin-bottom: 20px;
+  }
+  
+  .donation-buttons .item-btn {
+    margin: 5px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 1.2px;
+  }
+  
+  .donate-btn {
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    background-color: var(--sec-color);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+  }
