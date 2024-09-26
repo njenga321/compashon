@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import './DonationForm.css'; // Import the CSS file
+import { useNavigate } from 'react-router-dom';
+import './DonationForm.css';
+import PaymentForm from './PaymentForm';
 
 const DonationForm = () => {
   const [selectedAmount, setSelectedAmount] = useState(500);
   const [customAmount, setCustomAmount] = useState('');
   const [isCustom, setIsCustom] = useState(false);
   const [currency, setCurrency] = useState('Ksh');
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
 
   // Conversion rates
   const conversionRates = {
@@ -13,6 +16,8 @@ const DonationForm = () => {
     USD: 140,
     Euro: 145,
   };
+
+  const navigate = useNavigate();
 
   // Function to get currency symbol
   const getCurrencySymbol = () => {
@@ -36,24 +41,23 @@ const DonationForm = () => {
 
   const handleAmountClick = (amount) => {
     setIsCustom(false);
-    setCustomAmount(''); // Clear custom input when clicking a button
+    setCustomAmount('');
     setSelectedAmount(amount);
   };
 
   const handleCustomClick = () => {
-    setIsCustom(true);  // Switch to custom mode
-    setSelectedAmount(''); // Clear selected predefined amount
+    setIsCustom(true);
+    setSelectedAmount('');
   };
 
-  // Function to handle formatting of the custom input value
+  // Format number with commas
   const formatNumberWithCommas = (value) => {
-    if (!value) return value; // Prevent formatting empty value
+    if (!value) return value;
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
 
-  // Update custom amount and remove commas while typing
   const handleCustomAmountChange = (e) => {
-    const value = e.target.value.replace(/,/g, ''); // Remove commas before storing
+    const value = e.target.value.replace(/,/g, '');
     setCustomAmount(value);
   };
 
@@ -61,20 +65,26 @@ const DonationForm = () => {
     setCurrency(e.target.value);
   };
 
-  // If custom, use customAmount, otherwise, use selectedAmount (raw for calculation)
+  const handleShowPayment = () => {
+    setShowPaymentModal(true);
+  };
+
+  const handleClosePayment = () => {
+    setShowPaymentModal(false);
+  };
+
+  // If custom, use customAmount, otherwise, use selectedAmount
   const rawAmount = isCustom ? customAmount : selectedAmount;
   const convertedAmount = rawAmount ? convertAmount(rawAmount) : '0.00';
-
-  // Format the amount for display (after conversion)
   const formattedAmount = new Intl.NumberFormat().format(Number(convertedAmount));
+
+ 
 
   return (
     <div className="donation-form">
-
-      {/* Display Div */}
       <div className="donation-display">
         <div className="currency-selector">
-          <select value={currency} onChange={handleCurrencyChange} className="">
+          <select value={currency} onChange={handleCurrencyChange}>
             <option value="Ksh">Ksh</option>
             <option value="USD">USD</option>
             <option value="Euro">Euro</option>
@@ -96,7 +106,6 @@ const DonationForm = () => {
           </div>
         </div>
       </div>
-
       <div className="donation-buttons">
         {donationAmounts.map((amount) => (
           <button
@@ -111,13 +120,19 @@ const DonationForm = () => {
           Custom
         </button>
       </div>
-
       <button
-        onClick={() => alert(`You donated ${formattedAmount} ${currency}`)}
+        onClick={handleShowPayment}
         className="item-btn donate-btn"
       >
         Donate Now
       </button>
+
+      <PaymentForm
+        show={showPaymentModal}
+        handleClose={handleClosePayment}
+        selectedAmount={formattedAmount}
+        currency={currency}
+      />
     </div>
   );
 };

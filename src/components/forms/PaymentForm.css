@@ -1,0 +1,121 @@
+.modal-dialog .modal-content .container {
+  padding: 0 !important;
+}
+.modal-content {
+  width: auto !important;
+}
+.modal-dialog {
+  width: auto !important; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-pop-up {
+  width: auto;
+  max-width: 650px;
+}
+.modal-inner {
+  width: auto;
+}
+.payment-card {
+  padding: 10px;
+  border: none;
+}
+.card-header {
+    background-color: var(--white-color) !important;
+    border: none;
+}
+
+
+.tab-content {
+  position: relative;
+}
+
+
+
+  .rounded {
+    border-radius: 1rem;
+  }
+  
+  .select-title {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+  }
+  .select-title h2{
+    font-weight: 600;
+    font-size: 25px;
+  }
+ 
+  button.mfp-close {
+    position: absolute;
+    display: block;
+    font-size: 1.5rem;
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    overflow: visible;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    display: block;
+    outline: none;
+    padding: 0;
+    z-index: 1000005;
+    box-shadow: none;
+    touch-action: manipulation;
+  }
+
+  .nav-pills .nav-link {
+    color: #555;
+    transition: all 0.4s ease-in-out;
+    border-radius: 15px;
+  }
+  .nav-pills .nav-link:hover {
+    color: var(--sec-color);
+  }
+  
+  .nav-pills .nav-link.active {
+    color: var(--white-color);
+    background-color: var(--sec-color);
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin: 0 0 15px;
+  }
+  .form-group label h6{
+    font-weight: normal;
+  }
+  .form-group input:focus {
+    border-color: var(--border);
+    outline: none;
+    box-shadow: none;
+  }
+  .form-wrap {
+    width: max-content;
+  }
+  .form-wrap span {
+    border: 1px solid var(--border);
+    padding: 10px;
+  }
+  .form-wrap .give-donation-total-label{
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    border-bottom-left-radius: 15px ;
+    border-top-left-radius: 15px;
+  }
+  .form-wrap .give-final-total-amount {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }

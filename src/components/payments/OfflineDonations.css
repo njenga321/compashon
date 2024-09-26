@@ -1,0 +1,31 @@
+.donation-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+}
+
+
+ol {
+    padding-left: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+ol li {
+    margin-bottom: 15px;
+}
+
+.address {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+strong {
+    color: #000;
+}
+
+@media (max-width: 600px) {
+    .donation-container {
+        padding: 15px;
+    }
+}

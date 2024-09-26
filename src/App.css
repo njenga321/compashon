@@ -20,29 +20,47 @@ body {
   --white-color:#ffffff;
   --black-color:#000000;
   --dark-color: #0c0c0c;
+  --light: rgb(226, 218, 212);
+  --lighter: rgb(247, 245, 243);
+  --border: rgba(0, 0, 0, .1);
 }
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
-  color: #39311d;
+  color: #160801;
   font-weight: 400;
   font-family: "Patrick Hand", cursive;
+}
+.title-h2 {
+  font-size: 60px;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 48px;
+  padding-bottom: 12px;
+}
+p {
+  color: #666666;
 }
 .subtitle {
   font-size: 14px;
   display: block;
   margin-bottom: 5px;
   font-weight: 600;
+  color: var(--pri-color);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
+.rounded {
+  border-radius: 15px;
+}
 .item-btn {
   background-color: var(--pri-color);
   padding: 15px;
-  border-radius: 15vw;
+  border-radius: 15px;
+  border: none;
+  outline: none;
   text-decoration: none;
   color: var(--white-color);
   transition: all .4s ease-in-out;
