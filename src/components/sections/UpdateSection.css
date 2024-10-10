@@ -1,0 +1,201 @@
+.updates {
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+  
+  .updates-grid {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0;
+    width: 100%;
+    height: 1000.31px;
+  }
+  
+  .grid-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .grid-item {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  .updates-grid .gridTitle {
+    font-size: 23px;
+    font-weight: bold;
+  }
+  
+  .diagonal-item {
+    /* flex-grow: 3; Longest height */
+    flex-shrink: 0;
+  }
+  
+  .side-item, .center-item {
+    flex-grow: 1; /* Shorter height */
+  }
+  .updates-grid .grid-image {
+    height: 292px;
+    object-fit: cover;
+  }
+  .updates-grid  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ .diagonal-info {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  height: auto;
+ }
+ .diagonal-date-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:var(--white-color);
+  height: 60px;
+  width: 60px;
+  right: 30px;
+  top: -30px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: var(--sec-color);
+ }
+ .diagonal-day {
+  font-size: 23px;
+  letter-spacing: 1px;
+ }
+ .diagonal-day strong {
+  color: var(--white-color);
+ }
+ .diagonal-month {
+  font-size: 13px;
+  text-transform: uppercase;
+ }
+ .diagonal-info .gridSubtitle {
+  width: max-content;
+ }
+ .diagonal-info .program-title::before {
+  width: calc(100% + 30px);
+ }
+ .side-info .program-title.program-title::before {
+  background-color: var(--sec-color);
+ }
+  .diagonal-info .gridSubtitle,
+  .side-info .gridSubtitle {
+    font-size: 15px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .grid-item .gridDescription{
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .side-item {
+    position: relative;
+    padding: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .side-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Dark at the bottom, fading to transparent */
+    z-index: 0; 
+  }
+  .side-item .side-info {
+    position: absolute;
+    color: var(--white-color);
+    bottom: 30px;
+    z-index: 1;
+  }
+  .side-item .side-info .gridSubtitle, .gridTitle strong {
+    color: var(--white-color);
+  }
+  
+  .grid-column .center-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+  }
+  .center-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgb(255, 91, 0, 0.7);
+    z-index: -1; 
+  }
+  .center-item-bottom::before {
+    background: rgb(0, 128, 128, 0.7);
+  }
+ .center-item .center-quote-origin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  color: var(--white-color);
+  position: relative;
+ }
+ .center-item .center-quote-origin p {
+  color: var(--white-color);
+  border-bottom: 1px solid white;
+ }
+ .center-item .center-quote-origin span {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 15px;
+  font-size: 30px;
+ }
+  
+  /* Responsive Layout */
+  @media (max-width: 998px) {
+    .updates-grid {
+      height: max-content;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, auto);
+    }
+    .side-item {
+      height: 80vh;
+    }
+    .center-item {
+      height: 300px;
+    }
+    .updates-grid .grid-image {
+      height: 480px;
+    }
+  }
+  
+  

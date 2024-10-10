@@ -39,12 +39,22 @@
 .event-image {
     width: 100%;
     height: 300px;
+    overflow: hidden;
 }
 .event-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: inherit;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.event-box:hover .event-image img{
+    transform: scale(1.1);
 }
 .event-box a {
     text-decoration: none;

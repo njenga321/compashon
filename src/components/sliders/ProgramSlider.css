@@ -107,7 +107,7 @@
     text-overflow: ellipsis;
 }
 
-  .program-desc .program-title {
+  .program-title {
     position: relative;
     display: inline-block;
     font-weight: 500;

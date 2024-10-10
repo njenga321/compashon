@@ -5,6 +5,7 @@ import SupportSection from '../components/sections/SupportSection'
 import PaymentForm from '../components/forms/PaymentForm'
 import ProgramSlider from '../components/sliders/ProgramSlider'
 import EventSection from '../components/sections/EventSection'
+import UpdateSection from '../components/sections/UpdateSection'
 
 function Home() {
   return (
@@ -18,6 +19,8 @@ function Home() {
     <ProgramSlider />
 
     <EventSection />
+
+    <UpdateSection />
     </>
   )
 }
